@@ -6,6 +6,7 @@ import android.net.Uri
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.ComponentActivity
+import androidx.activity.compose.setContent
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.layout.*
@@ -38,7 +39,10 @@ class MainActivity: ComponentActivity(){
     }
 }
 
-@Composable fun OfflineShareTheme(content:@Composable()->Unit){ MaterialTheme(colorScheme=lightColorScheme(),content=content) }
+@Composable
+fun OfflineShareTheme(content: @Composable () -> Unit) {
+    MaterialTheme(colorScheme = lightColorScheme(), content = content)
+}
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable fun OfflineShareScreen(){
